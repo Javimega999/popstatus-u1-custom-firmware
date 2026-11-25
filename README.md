@@ -1,4 +1,4 @@
-# PopStatus U1 · firmware alternativo
+# PopStatus U1 · Custom Firmware
 
 **🇪🇸 Español** · [🇬🇧 English](#-english)
 
