@@ -1,0 +1,6 @@
+# Contraseñas y copias del firmware original: nunca al repositorio
+secrets.yaml
+*.bin
+copia_original*
+.esphome/
+__pycache__/

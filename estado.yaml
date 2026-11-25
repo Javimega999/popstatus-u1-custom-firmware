@@ -1,0 +1,60 @@
+# Ajustes de UN estado de la impresora (se incluye una vez por estado desde popstatus.yaml).
+select:
+  - platform: template
+    id: ${id}_efecto
+    name: "${nombre} · Efecto"
+    icon: mdi:auto-fix
+    options: ["Apagado", "Fijo", "Respirar", "Parpadeo", "Onda", "Marquesina", "Ciclo de color", "Arcoíris", "Barra de progreso", "Cometa"]
+    initial_option: "${efecto}"
+    optimistic: true
+    restore_value: true
+    web_server:
+      sorting_group_id: g_${id}
+      sorting_weight: 1
+
+text:
+  - platform: template
+    id: ${id}_color
+    name: "${nombre} · Color (HEX)"
+    icon: mdi:palette
+    mode: text
+    min_length: 6
+    max_length: 7
+    optimistic: true
+    restore_value: true
+    initial_value: "${color}"
+    web_server:
+      sorting_group_id: g_${id}
+      sorting_weight: 2
+
+number:
+  - platform: template
+    id: ${id}_brillo
+    name: "${nombre} · Brillo"
+    icon: mdi:brightness-6
+    min_value: 0
+    max_value: 100
+    step: 5
+    unit_of_measurement: "%"
+    mode: slider
+    initial_value: ${brillo}
+    optimistic: true
+    restore_value: true
+    web_server:
+      sorting_group_id: g_${id}
+      sorting_weight: 3
+  - platform: template
+    id: ${id}_vel
+    name: "${nombre} · Velocidad"
+    icon: mdi:speedometer
+    min_value: 5
+    max_value: 100
+    step: 5
+    unit_of_measurement: "%"
+    mode: slider
+    initial_value: ${vel}
+    optimistic: true
+    restore_value: true
+    web_server:
+      sorting_group_id: g_${id}
+      sorting_weight: 4
